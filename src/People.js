@@ -6,14 +6,16 @@ class People extends Component {
     people: [],
   };
 
-
-
   async componentDidMount() {
     const url = "https://swapi.co/api/people/?format=json";
     const response = await fetch(url);
     const data = await response.json();
-    console.log(data.results);
-    this.setState({people: data.results, loading: false});
+    const array = data.results;
+    array.sort(function(b, a) {
+      return a.mass- b.mass;
+    });
+    console.log(array);
+    this.setState({people: array, loading: false});
   }
 
   render() {
