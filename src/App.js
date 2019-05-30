@@ -13,17 +13,21 @@ class App extends Component {
   render() {
     return (
       <HashRouter>
-        <div>
-          <h1>Star Wars</h1>
-          <ul className="header">
-            <li><NavLink to="/">Home</NavLink></li>
-            <li><NavLink to="/people">People</NavLink></li>
-            <li><NavLink to="/about">About</NavLink></li>
-          </ul>
-          <div className="content">
-            <Route exact path="/" component={Home} />
-            <Route path="/people" component={People} />
-            <Route path="/about" component={About} />
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-2 menu">
+              <ul className="list-group">
+                <li className="list-group-item"><NavLink to="/">Home</NavLink></li>
+                <li className="list-group-item"><NavLink to="/people">People</NavLink></li>
+                <li className="list-group-item"><NavLink to="/about">About</NavLink></li>
+              </ul>
+            </div>
+
+            <div className="col-10 content">
+              <Route exact path="/" component={Home} />
+              <Route path="/people" component={People} />
+              <Route path="/about" component={About} />
+            </div>
           </div>
         </div>
       </HashRouter>

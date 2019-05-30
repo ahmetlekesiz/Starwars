@@ -22,7 +22,6 @@ class People extends Component {
     return (
       <div>
         <h2>PEOPLE</h2>
-        <p>Imperdiet proin fermentum leo vel orci porta non pulvinar. Eget nunc lobortis mattis aliquam faucibus purus in massa. Tincidunt ornare massa eget egestas purus viverra accumsan in nisl. Mi quis hendrerit dolor magna eget est lorem ipsum. Scelerisque eu ultrices vitae auctor eu augue. Integer eget aliquet nibh praesent tristique magna sit. Bibendum neque egestas congue quisque egestas diam. Facilisis leo vel fringilla est ullamcorper eget nulla facilisi. Nunc non blandit massa enim. Amet justo donec enim diam vulputate ut pharetra.</p>
         {this.state.loading || !this.state.people ? (
           <div>loading...</div>
         ) : (
